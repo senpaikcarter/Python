@@ -3,7 +3,7 @@ import random
 mylist = ['Stir Fry',
 'Breakfast',
 'Enchiladas',
-'Sausage and Potatos ',
+'Sausage and Potatos',
 'Tacos',
 'Burgers and fries',
 'Pulled Pork',
