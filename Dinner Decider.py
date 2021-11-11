@@ -26,4 +26,4 @@ random_index = random.randrange(len(mylist))
 
 #print(mylist[random_index])
 
-print(random.sample(mylist,4))
+print(random.sample(mylist,4))#the number after the comma is how many dinners you would like to figure out. 
