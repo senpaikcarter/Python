@@ -9,8 +9,9 @@
 #print(arr)
 import csv
 import random
-value = input("please enter the numbder of Dinners you need decided:\n")
+value = input("please enter the number of Dinners you need decided:\n")
 value = int(value)
+#value2 = input("You wanted to have {value} Dinners decided is that right? Press Enter to Continue")
 print(f'Calculating {value} Dinners')
 #below imports the csv and makes it a list to clean up the code base and allows for easier reading
 with open('Dinner.csv', newline='')as f:
@@ -18,7 +19,6 @@ with open('Dinner.csv', newline='')as f:
     mylist = list(reader)
 
 random.shuffle(mylist)
-
 random_index = random.randrange(len(mylist))
 
 #print(mylist[random_index])
