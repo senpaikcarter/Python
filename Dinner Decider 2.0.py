@@ -10,7 +10,7 @@
 import csv
 import random
 
-#mylist = ['Dinner.csv']
+#below imports the csv and makes it a list to clean up the code base and allows for easier reading
 with open('Dinner.csv', newline='')as f:
     reader = csv.reader(f)
     mylist = list(reader)

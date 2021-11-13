@@ -20,6 +20,7 @@ mylist = ['Stir Fry',
 'Tuscan Chicken Soup',
 'Random Recipe from Cookbook',
 'Big Salad']
+
 random.shuffle(mylist)
 
 random_index = random.randrange(len(mylist))
