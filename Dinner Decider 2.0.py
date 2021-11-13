@@ -9,7 +9,7 @@
 #print(arr)
 import csv
 import random
-value = input("please enter the number of Dinners you need decided:\n")
+value = input("please enter the number of dinners you need decided:\n")
 value = int(value)
 #value2 = input("You wanted to have {value} Dinners decided is that right? Press Enter to Continue")
 print(f'Calculating {value} Dinners')
