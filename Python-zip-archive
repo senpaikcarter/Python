@@ -1,0 +1,82 @@
+#Import shutil module
+import shutil
+from shutil import make_archive
+
+#Import zlib
+import zlib
+import zipfile
+import tarfile
+
+#Import time
+import time
+from datetime import datetime
+#Import os module
+import os
+from sqlite3 import Date
+
+#path
+path = "/media/1TBNVME/Pictures"
+
+#folder naming for current day
+today = datetime.now()
+
+if today.hour <12:
+    h = "00"
+else:
+    h = "12"
+
+#List files and directories
+#in  'home/kenny/Pictures'
+print("Before copying file:")
+print(os.listdir(path))
+
+#Source Path
+#src = "/home/kenny"
+
+#Destination Path 
+#this was my example ##os.mkdir("/media/1TBNVME/Pictures/" + today.strftime('%Y%m%d')+ h)
+#dest = ("/media/storage/Backups/" + today.strftime('%Y%m%d')+ h)
+#dest = ("/media/storage/Backups/") # + today.strftime('%Y%m%d')+ h)
+# Copy the content of 
+# source to destination 
+#destination = shutil.copytree(src, dest)
+
+#zip file archiver 
+
+#archive_name = os.path.expanduser(os.path.join('~', 'myarchive'))
+#root_dir = os.path.expanduser(os.path.join('~', '.ssh'))
+
+#archive_name =os.path.expanduser(os.path.join('home','kenny','Backup'))
+archive_name = ("/media/storage/Backups/" +today.strftime('%Y%m%d')+ h)
+root_dir ="/home/kenny/Documents"
+#base_dir="Pictures"
+make_archive(archive_name, 'gztar', root_dir)
+
+#archive_name = os.path.expanduser(os.path.join('~', 'myarchive'))
+#archive_name = "/media/1TBNVME/Pictures"
+
+#make_archive(
+    #archive_name,
+    #'tar',
+    #root_dir="/media/storage/",
+    #base_dir="Backups"
+    #base_dir="Backups",
+#)
+
+#make_archive(base_name, format[, root_dir[, base_dir]])
+# make_archive(src, "gztar",dest)
+
+
+
+# List files and directories 
+# in "/home/kenny/Pictures"
+print("After copying file:")
+print(os.listdir("/home/kenny"))
+
+#Print path of newly
+#created file
+print("Destination path:", "/home/kenny")
+
+
+
+#shutil.copy2('/home/kenny/Pictures/*', '/media/1TBNVME/Pictures/*', *, follow_symlinks=True)
