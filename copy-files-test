@@ -1,0 +1,35 @@
+#Import shutil module
+import shutil
+
+#Import os module
+import os
+
+#path
+path = '/home/kenny/Pictures'
+
+#List files and directories
+#in  'home/kenny/Pictures'
+print("Before copying file:")
+print(os.listdir(path))
+
+#Source Path
+src = "/home/kenny/Pictures/"
+
+#Destination Path 
+dest = "/media/1TBNVME/Pictures"
+
+# Copy the content of 
+# source to destination 
+destination = shutil.copytree(src, dest)
+
+# List files and directories 
+# in "/home/kenny/Pictures"
+print("After copying file:")
+print(os.listdir(path))
+
+#Print path of newly
+#created file
+print("Destination path:", destination)
+
+
+#shutil.copy2('/home/kenny/Pictures/*', '/media/1TBNVME/Pictures/*', *, follow_symlinks=True)
