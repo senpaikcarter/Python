@@ -1,11 +1,23 @@
 #Import shutil module
 import shutil
 
+#Import time
+import time
+from datetime import datetime
 #Import os module
 import os
+from sqlite3 import Date
 
 #path
 path = '/home/kenny/Pictures'
+
+#folder naming for current day
+today = datetime.now()
+
+if today.hour <12:
+    h = "00"
+else:
+    h = "12"
 
 #List files and directories
 #in  'home/kenny/Pictures'
@@ -16,7 +28,8 @@ print(os.listdir(path))
 src = "/home/kenny/Pictures/"
 
 #Destination Path 
-dest = "/media/1TBNVME/Pictures"
+#this was my example ##os.mkdir("/media/1TBNVME/Pictures/" + today.strftime('%Y%m%d')+ h)
+dest = ("/media/1TBNVME/Pictures/" + today.strftime('%Y%m%d')+ h)
 
 # Copy the content of 
 # source to destination 
