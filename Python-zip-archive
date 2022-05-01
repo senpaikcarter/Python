@@ -15,7 +15,7 @@ import os
 from sqlite3 import Date
 
 #path
-path = "/media/1TBNVME/Pictures"
+path = "/home/kenny/Documents"
 
 #folder naming for current day
 today = datetime.now()
@@ -49,6 +49,7 @@ print(os.listdir(path))
 #archive_name =os.path.expanduser(os.path.join('home','kenny','Backup'))
 archive_name = ("/media/storage/Backups/" +today.strftime('%Y%m%d')+ h)
 root_dir ="/home/kenny/Documents"
+#base_dir ="Documents"
 #base_dir="Pictures"
 make_archive(archive_name, 'gztar', root_dir)
 
@@ -71,11 +72,11 @@ make_archive(archive_name, 'gztar', root_dir)
 # List files and directories 
 # in "/home/kenny/Pictures"
 print("After copying file:")
-print(os.listdir("/home/kenny"))
+print(os.listdir("/media/storage/Backups"))
 
 #Print path of newly
 #created file
-print("Destination path:", "/home/kenny")
+print("Destination path:", "/media/storage/Backups")
 
 
 
