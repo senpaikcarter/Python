@@ -4,8 +4,8 @@ import shutil
 import os
 
 #Import time
-import time
-from datetime import datetime
+#import time #commented out as they are unused 
+#from datetime import datetime #commented out as they are unused 
 
 #starting path for ingest 
 
