@@ -11,7 +11,7 @@ import os
 
 path = "/home/kenny/Documents/Photography-Ingest/"
 
-print("Before copying file:")
+print("Copying the following files:")
 print(os.listdir(path))
 
 #setting up source and destination 
@@ -28,7 +28,7 @@ try:
 except shutil.SameFileError:
     pass
 
-print("After copying file:")
+print("Contents of the Destination")
 print(os.listdir(dest))
 
 print("Clearing Ingest Folder")
