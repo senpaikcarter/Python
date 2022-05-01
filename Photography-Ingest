@@ -1,0 +1,43 @@
+#!/usr/bin/python
+
+import shutil
+import os
+
+#Import time
+import time
+from datetime import datetime
+
+#starting path for ingest 
+
+path = "/home/kenny/Documents/Photography-Ingest/"
+
+print("Before copying file:")
+print(os.listdir(path))
+
+#setting up source and destination 
+
+src = "/home/kenny/Documents/Photography-Ingest"
+
+dest = "/media/storage/Buse Photography"
+
+#shutil.copytree(src, dest, symlinks=False, dirs_exist_ok=True)
+#shutil.copystat(src, dest, follow_symlinks=True)
+
+try:
+    shutil.copytree(src, dest, symlinks=False, dirs_exist_ok=True)
+except shutil.SameFileError:
+    pass
+
+print("After copying file:")
+print(os.listdir(dest))
+
+print("Clearing Ingest Folder")
+for files in os.listdir(src):
+    path2 = os.path.join(src, files)
+    try:
+        shutil.rmtree(path2)
+    except OSError:
+        os.remove(path2)
+
+print("Listing Ingest Inventory")
+print(os.listdir(src))
