@@ -1,5 +1,5 @@
 #!/usr/bin/python
-
+#This is a python script I wrote that automatically moves my Photographs to bulk storage where it is then also backed up to a server 
 import shutil
 import os
 
